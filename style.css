@@ -1,0 +1,63 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Slider Container */
+.slider-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden; 
+    height: 100vh; /* Make the container fill the entire viewport height */
+}
+
+/* Single Slide Styling */
+.slide {
+    display: none; /* Hide all slides by default (JavaScript shows them one by one) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image Styling */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Text Overlay Styling */
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* For precise centering */
+    color: white; 
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    border-radius: 12px;
+    text-align: center;
+}
+
+.text-overlay h1 {
+    margin: 0;
+    font-size: 3.5em; /* Large font size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Shadow for better visibility */
+}
+
+/* Fading Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
